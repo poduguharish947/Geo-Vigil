@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Course Portal</h1>
+
+    <div id="register-section" class="form-section">
+      <h2>Register</h2>
+      <input type="text" id="regName" placeholder="Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPassword" placeholder="Password" required>
+      <select id="regRole">
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+      </select>
+      <button onclick="registerUser()">Register</button>
+      <p>Already have an account? <a href="#" onclick="toggleForm('login')">Login here</a></p>
+    </div>
+
+    <div id="login-section" class="form-section hidden">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button onclick="loginUser()">Login</button>
+      <p>Don't have an account? <a href="#" onclick="toggleForm('register')">Register here</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
